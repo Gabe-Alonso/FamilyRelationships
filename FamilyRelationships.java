@@ -30,19 +30,24 @@ public class FamilyRelationships {
 
         Person myPerson = parser.getPerson(personName);
         System.out.println("Ancestors:");
-        ancestors(myPerson, 0);
+        ancestors(myPerson);
         System.out.println("Descendants:");
-        descendants(myPerson, 0);
+        descendants(myPerson);
         
     }
 
     //yash
     public static void descendants(Person person, int level){
-        Person mother = person.getMother();
-        Person father = person.getFather();
+        //Person mother = person.getMother();
+        //Person father = person.getFather();
     }
 
     //gabe
+    public static void ancestors(Person p){
+        System.out.println(p.getName());
+        ancestors(p, 0);
+    }
+
     public static void ancestors(Person p, int level){
         if(p.getMother() != null && !(p.getMother().getName().equals("unknown"))){
             for(int i = 0; i <= level; i++){

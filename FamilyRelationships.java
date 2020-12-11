@@ -1,12 +1,20 @@
 import java.util.*;
-
-import org.graalvm.compiler.phases.common.ConditionalEliminationUtil.InputFilter;
-
+import java.io.*;
 public class FamilyRelationships {
 
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        System.out.println("This program will show you all of the ancestors and descendant of a person");
+        try {
+            Scanner input = new Scanner(new File("tudor.dat"));
+            FamilyInfo parser = new FamilyInfo();
+            parser.read(input);
+            //The familyinfo object now has a field that is an arraylist of all Person objects
+            //TODO: implement user experience, call ancestors or descendants
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+    }
 
         /*
         System.out.println("Where is the input file?");

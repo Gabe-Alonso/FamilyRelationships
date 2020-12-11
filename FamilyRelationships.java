@@ -7,32 +7,40 @@ public class FamilyRelationships {
     public static void main(String[] args){
 
         //tyler
-        /*
+        Scanner in = new Scanner(System.in);
         System.out.println("Where is the input file?");
-        String inputFile = input.nextLine();
-        System.out.println("Person's name ('quit' to end)?");
-        String personName = input.nextLine();
-        */
-        String inputFile = "tudor.dat";
-        String personName = "Arthur";
+        String inputFile = in.nextLine();
+
+        String personName = "";
+        while(true){
+            System.out.println("Person's name ('quit' to end)?");
+            personName = in.nextLine();
+            if(personName.equalsIgnoreCase("quit")){
+                break;
+            }
+            /*
+            String inputFile = "tudor.dat";
+            String personName = "James VI & I";
+            */
 
 
+            //tj
+            FamilyInfo parser = new FamilyInfo();
+            try(Scanner input = new Scanner(new File(inputFile))) {
+                parser.read(input);
+                //The familyinfo object now has a field that is an arraylist of all Person objects
+                //TODO: implement user experience, call ancestors or descendants
+            } catch (Exception e) {
+                e.printStackTrace();
+            } 
 
-        //tj
-        FamilyInfo parser = new FamilyInfo();
-        try(Scanner input = new Scanner(new File(inputFile))) {
-            parser.read(input);
-            //The familyinfo object now has a field that is an arraylist of all Person objects
-            //TODO: implement user experience, call ancestors or descendants
-        } catch (Exception e) {
-            e.printStackTrace();
-        } 
+            Person myPerson = parser.getPerson(personName);
+            System.out.println("Ancestors:");
+            ancestors(myPerson);
+            System.out.println("Descendants:");
+            //descendants(myPerson);
 
-        Person myPerson = parser.getPerson(personName);
-        System.out.println("Ancestors:");
-        ancestors(myPerson);
-        System.out.println("Descendants:");
-        //descendants(myPerson);
+        }
         
     }
 

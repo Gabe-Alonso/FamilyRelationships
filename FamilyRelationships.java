@@ -31,7 +31,13 @@ public class FamilyRelationships {
         Person father = person.getFather();
     }
 
-    public static void descendants(){
-        
+    public static void descendants(Person p, int level){
+        if(!(p.getMother().getName().equals("unknown"))){
+            for(int i = 0; i <= level; i++){
+                System.out.print("\t");
+            }
+            System.out.println(p.getMother().getName());
+            descendants(p.getMother(), level + 1);
+        }
     }
 }

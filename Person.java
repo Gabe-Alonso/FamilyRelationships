@@ -1,5 +1,5 @@
 
-//tyler 
+//tylern't
 public class Person {
     private String personName;
     Person mother;
@@ -18,7 +18,11 @@ public class Person {
 
 	public void setFather(Person father) {
 
-	}
+    }
+    
+    public String getName() {
+        return personName;
+    }
     
 
 }

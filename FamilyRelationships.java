@@ -3,17 +3,7 @@ import java.io.*;
 public class FamilyRelationships {
 
     public static void main(String[] args){
-        //tj
-        try {
-            Scanner input = new Scanner(new File("tudor.dat"));
-            FamilyInfo parser = new FamilyInfo();
-            parser.read(input);
-            //The familyinfo object now has a field that is an arraylist of all Person objects
-            //TODO: implement user experience, call ancestors or descendants
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
+
         //tyler
         /*
         System.out.println("Where is the input file?");
@@ -23,6 +13,25 @@ public class FamilyRelationships {
         */
         String inputFile = "tudor.dat";
         String personName = "Henry VII";
+
+
+
+        //tj
+        FamilyInfo parser = new FamilyInfo();
+        try(Scanner input = new Scanner(new File(inputFile))) {
+            parser.read(input);
+            //The familyinfo object now has a field that is an arraylist of all Person objects
+            //TODO: implement user experience, call ancestors or descendants
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+
+        Person myPerson = parser.getPerson(personName);
+        System.out.println("Ancestors:");
+        ancestors(myPerson, 0);
+        System.out.println("Descendants:");
+        descendants(myPerson, 0);
+        
     }
 
     //yash

@@ -26,7 +26,11 @@ public class Person {
 
 	public void setFather(Person fatherIn) {
         father = fatherIn;
-	}
+    }
+    
+    public String getName() {
+        return personName;
+    }
     
 
 }

@@ -8,7 +8,7 @@ public class FamilyRelationships {
 
     }
 
-    public static void descendents(){
+    public static void descendants(){
         
     }
 }

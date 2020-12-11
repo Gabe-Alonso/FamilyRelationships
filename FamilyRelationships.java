@@ -38,8 +38,8 @@ public class FamilyRelationships {
 
     //yash
     public static void descendants(Person person, int level){
-        Person mother = person.getMother();
-        Person father = person.getFather();
+        //Person mother = person.getMother();
+        //Person father = person.getFather();
     }
 
     //gabe

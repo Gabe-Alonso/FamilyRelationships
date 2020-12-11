@@ -14,7 +14,7 @@ public class FamilyRelationships {
         String personName = input.nextLine();
         */
         String inputFile = "tudor.dat";
-        String personName = "James VI & I";
+        String personName = "Arthur";
 
 
 

@@ -13,8 +13,6 @@ public class FamilyRelationships {
             e.printStackTrace();
         }
         
-        
-    }
 
         /*
         System.out.println("Where is the input file?");

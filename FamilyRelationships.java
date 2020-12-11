@@ -32,7 +32,7 @@ public class FamilyRelationships {
         System.out.println("Ancestors:");
         ancestors(myPerson);
         System.out.println("Descendants:");
-        descendants(myPerson);
+        //descendants(myPerson);
         
     }
 
@@ -44,8 +44,8 @@ public class FamilyRelationships {
 
     //gabe
     public static void ancestors(Person p){
-        System.out.println(p.getName());
-        ancestors(p, 0);
+        System.out.println("\t" + p.getName());
+        ancestors(p, 1);
     }
 
     public static void ancestors(Person p, int level){

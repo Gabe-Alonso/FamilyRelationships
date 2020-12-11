@@ -49,5 +49,12 @@ public class FamilyRelationships {
             System.out.println(p.getMother().getName());
             descendants(p.getMother(), level + 1);
         }
+        if(!(p.getFather().getName().equals("unknown"))){
+            for(int i = 0; i <= level; i++){
+                System.out.print("\t");
+            }
+            System.out.println(p.getFather().getName());
+            descendants(p.getFather(), level + 1);
+        }
     }
 }

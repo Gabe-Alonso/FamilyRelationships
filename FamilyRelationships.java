@@ -16,8 +16,19 @@ public class FamilyRelationships {
         
     }
 
-    public static void ancestors(){
+        /*
+        System.out.println("Where is the input file?");
+        String inputFile = input.nextLine();
+        System.out.println("Person's name ('quit' to end)?");
+        String personName = input.nextLine();
+        */
+        String inputFile = "tudor.dat";
+        String personName = "Henry VII";
+    }
 
+    public static void ancestors(Person person, int level){
+        Person mother = Person.getMother();
+        Person father = Person.getFather();
     }
 
     public static void descendants(){

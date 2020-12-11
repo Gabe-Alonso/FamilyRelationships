@@ -31,6 +31,13 @@ public class Person {
     public String getName() {
         return personName;
     }
+
+    public Person getMother(){
+        return mother;
+    }
+    public Person getFather(){
+        return father;
+    }
     
 
 }

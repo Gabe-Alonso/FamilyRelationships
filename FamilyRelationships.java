@@ -35,11 +35,12 @@ public class FamilyRelationships {
             } 
 
             Person myPerson = parser.getPerson(personName);
-            System.out.println("Ancestors:");
-            ancestors(myPerson);
-            System.out.println("Descendants:");
-            //descendants(myPerson);
-
+            if(myPerson != null){
+                System.out.println("Ancestors:");
+                ancestors(myPerson);
+                System.out.println("Descendants:");
+                //descendants(myPerson);
+            }
         }
         
     }

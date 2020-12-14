@@ -1,10 +1,5 @@
-
-
-//tylern't
-
 import java.util.*;
-//tyler 
-
+//tyler coded this class 
 public class Person {
 
     //instance variables 

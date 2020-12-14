@@ -24,7 +24,7 @@ public class FamilyRelationships {
             try(Scanner input = new Scanner(new File(inputFile))) {
                 parser.read(input);
                 //The familyinfo object now has a field that is an arraylist of all Person objects
-                //TODO: implement user experience, call ancestors or descendants
+               
             } catch (Exception e) {
                 e.printStackTrace();
             } 
@@ -39,14 +39,10 @@ public class FamilyRelationships {
         }
     }
 
-    //yash
-    /** 
-    public static void descendants(Person p) {
-        System.out.println("\t" + p.getName());
-        descendants(p, 1);
-    }
-    */
-    
+    //yash and TJ
+  
+    //Prints children in order, taking parameter p as person and int level for
+    //initial number of tabs
     public static void descendants(Person p, int level){
         for (int j = 0; j < level; j++) {
             System.out.print("\t");
@@ -54,6 +50,7 @@ public class FamilyRelationships {
         System.out.println(p.getName());
         ArrayList<Person> kids =  new ArrayList<Person>();
         kids = p.getKids();
+        //utilizes recursion to loop through all children
         for (int i = 0; i < p.getKids().size(); i++) {
             descendants(p.getKids().get(i), level + 1);
         }

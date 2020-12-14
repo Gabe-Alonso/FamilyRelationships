@@ -20,6 +20,8 @@ public class FamilyRelationships {
             }
 
             //tj
+            //creates a Scanner object to read the input file and passes it to the FamilyInfo info class to 
+            //parse into Person objects.
             FamilyInfo parser = new FamilyInfo();
             try(Scanner input = new Scanner(new File(inputFile))) {
                 parser.read(input);
@@ -28,7 +30,7 @@ public class FamilyRelationships {
             } catch (Exception e) {
                 e.printStackTrace();
             } 
-
+            //Call ancestor and descendant methods to output ancestors and descendants.
             Person myPerson = parser.getPerson(personName);
             if(myPerson != null){
                 System.out.println("Ancestors:");

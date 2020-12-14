@@ -21,17 +21,13 @@ public class FamilyRelationships {
                 break;
             }
 
-<<<<<<< HEAD
-=======
             //tj
             //creates a Scanner object to read the input file and passes it to the FamilyInfo info class to 
             //parse into Person objects.
->>>>>>> 581be29e876a10aec45cd5e5a3b473840fb3e7f4
             FamilyInfo parser = new FamilyInfo();
             try(Scanner input = new Scanner(new File(inputFile))) {
                 parser.read(input);
                 //The familyinfo object now has a field that is an arraylist of all Person objects
-                //TODO: implement user experience, call ancestors or descendants
             } catch (Exception e) {
                 e.printStackTrace();
             } 

@@ -34,7 +34,7 @@ public class FamilyRelationships {
                 System.out.println("Ancestors:");
                 ancestors(myPerson);
                 System.out.println("Descendants:");
-                //descendants(myPerson);
+                descendants(myPerson, 1);
             }
         }
     }
@@ -52,7 +52,8 @@ public class FamilyRelationships {
             System.out.print("\t");
         }
         System.out.println(p.getName());
-        ArrayList<Person> kids = p.getKids().clone();
+        ArrayList<Person> kids =  new ArrayList<Person>();
+        kids = p.getKids();
         for (int i = 0; i < p.getKids().size(); i++) {
             descendants(p.getKids().get(i), level + 1);
         }

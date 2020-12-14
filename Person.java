@@ -6,6 +6,8 @@ import java.util.*;
 //tyler 
 
 public class Person {
+
+    //instance variables 
     private String personName;
     private Person mother;
     private Person father;
@@ -40,6 +42,9 @@ public class Person {
     public Person getFather(){
         return father;
     }
-    
 
+    //returns arraylist of children 
+    public ArrayList<Person> getKids(){
+        return kids;
+    }
 }

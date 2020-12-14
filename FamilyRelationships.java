@@ -18,11 +18,6 @@ public class FamilyRelationships {
             if(personName.equalsIgnoreCase("quit")){
                 break;
             }
-            /*
-            String inputFile = "tudor.dat";
-            String personName = "James VI & I";
-            */
-
 
             //tj
             FamilyInfo parser = new FamilyInfo();
@@ -42,7 +37,6 @@ public class FamilyRelationships {
                 //descendants(myPerson);
             }
         }
-        
     }
 
     //yash

@@ -42,4 +42,9 @@ public class Person {
     public Person getFather(){
         return father;
     }
+
+    //returns arraylist of children 
+    public ArrayList<Person> getKids(){
+        return kids;
+    }
 }

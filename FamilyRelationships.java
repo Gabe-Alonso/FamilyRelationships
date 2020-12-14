@@ -65,7 +65,7 @@ public class FamilyRelationships {
             }
             //Print's the mother's name
             System.out.println(p.getMother().getName());
-            //Recurisively sends through this mother's mother into the ancestors method with
+            //Recurisively sends through this person's mother into the ancestors method with
             //an increment on level
             ancestors(p.getMother(), level + 1);
         }
@@ -80,7 +80,7 @@ public class FamilyRelationships {
             }
             //Print's the father's name
             System.out.println(p.getFather().getName());
-            //Recurisively sends through this father's father into the ancestors method with
+            //Recurisively sends through this person's father into the ancestors method with
             //an increment on level
             ancestors(p.getFather(), level + 1);
         }

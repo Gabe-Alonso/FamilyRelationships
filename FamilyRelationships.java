@@ -4,7 +4,7 @@ import java.util.*;
 import java.io.*;
 public class FamilyRelationships {
 
-    //TJ and Yash contributed to main 
+    //TJ and Tyler contributed to main 
     public static void main(String[] args){
 
         //interaction with user asking for file name

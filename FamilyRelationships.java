@@ -8,12 +8,12 @@ public class FamilyRelationships {
 
         //tyler
         Scanner in = new Scanner(System.in);
-        System.out.println("Where is the input file?");
+        System.out.print("Where is the input file?");
         String inputFile = in.nextLine();
 
         String personName = "";
         while(true){
-            System.out.println("Person's name ('quit' to end)?");
+            System.out.print("Person's name ('quit' to end)?");
             personName = in.nextLine();
             if(personName.equalsIgnoreCase("quit")){
                 break;

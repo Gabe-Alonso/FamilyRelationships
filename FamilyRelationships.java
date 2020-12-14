@@ -47,7 +47,11 @@ public class FamilyRelationships {
 
     //yash
     public static void descendants(Person p, int level){
-        i
+        System.out.println("\t" + p.getName());
+        ArrayList<Person> kids = p.getKids().clone();
+        for (int i = 0; i < p.getKids().size(); i++) {
+
+        }
         
     }
 
